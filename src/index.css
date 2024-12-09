@@ -1,0 +1,13 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+.parent-component, .counter-container, .heavy-calc-container, .todo-container, .live-time-container {
+    margin: 20px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+  
+  .child-component, .static-item, .calculation-result, .todo-list, .time-display {
+    margin: 10px 0;
+}
