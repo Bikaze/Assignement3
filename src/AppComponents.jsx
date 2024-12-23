@@ -8,7 +8,7 @@ import ItemList from "./components/ItemList";
 
 const AppComponents = () => {
   return (
-    <div className="min-h-screen p-8 bg-gray-100 flex flex-col items-center gap-4 max-w-screen-md mx-auto">
+    <div className="min-h-screen p-8 bg-gradient-to-br from-purple-50 to-indigo-100 flex flex-col items-center gap-4 max-w-screen-md mx-auto backdrop-blur-sm bg-white/60 rounded-xl shadow-2xl">
       <WelcomeMessage />
       <CurrentDate />
       <ParentHobbies />
