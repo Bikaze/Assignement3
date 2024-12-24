@@ -16,25 +16,29 @@ const ValidatedForm = () => {
   };
 
   return (
-    <form onSubmit={handleSubmit}>
-      <div>
-        <label>Email</label>
+    <form onSubmit={handleSubmit} className="max-w-md mx-auto p-4 bg-white shadow rounded space-y-4">
+      <div className="space-y-1">
+        <label className="block font-semibold">Email</label>
         <input
           type="text"
           value={email}
           onChange={(e) => setEmail(e.target.value)}
+          className="border p-2 w-full rounded"
         />
       </div>
-      <div>
-        <label>Password</label>
+      <div className="space-y-1">
+        <label className="block font-semibold">Password</label>
         <input
           type="password"
           value={password}
           onChange={(e) => setPassword(e.target.value)}
+          className="border p-2 w-full rounded"
         />
       </div>
-      {error && <p style={{ color: "red" }}>{error}</p>}
-      <button type="submit">Submit</button>
+      {error && <p className="text-red-500">{error}</p>}
+      <button type="submit" className="bg-blue-500 text-white py-2 px-4 rounded">
+        Submit
+      </button>
     </form>
   );
 };

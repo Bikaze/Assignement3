@@ -7,7 +7,7 @@ import MultiCheckboxForm from "./components/MultiCheckboxForm";
 
 const AppSimpleForms = () => {
   return (
-    <div>
+    <div className="min-h-screen bg-gray-100 p-6 space-y-6">
       <SimpleLoginForm />
       <SingleInputForm />
       <ValidatedForm />

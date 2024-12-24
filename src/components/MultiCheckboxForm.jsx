@@ -18,20 +18,21 @@ const MultiCheckboxForm = () => {
   }
 
   return (
-    <form onSubmit={handleSubmit}>
+    <form onSubmit={handleSubmit} className="max-w-md mx-auto p-4 bg-white shadow rounded space-y-4">
       {options.map(option => (
-        <div key={option}>
-          <label>
-            <input
-              type="checkbox"
-              checked={selected.includes(option)}
-              onChange={() => toggleOption(option)}
-            />
-            {option}
-          </label>
+        <div key={option} className="flex items-center space-x-2">
+          <input
+            type="checkbox"
+            checked={selected.includes(option)}
+            onChange={() => toggleOption(option)}
+            className="h-4 w-4"
+          />
+          <label className="text-gray-700">{option}</label>
         </div>
       ))}
-      <button type="submit">Submit</button>
+      <button type="submit" className="bg-blue-500 text-white py-2 px-4 rounded">
+        Submit
+      </button>
       <p>Selected: {selected.join(', ')}</p>
     </form>
   )
