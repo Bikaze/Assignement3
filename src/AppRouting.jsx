@@ -9,6 +9,7 @@ import ProductDetails from './pages/ProductDetails'
 import NotFound from './pages/NotFound'
 import Blog from './pages/Blog'
 import BlogPost from './pages/BlogPost'
+import Elvis from './pages/Elvis'
 
 const Layout = ({ children }) => (
   <>
@@ -19,36 +20,68 @@ const Layout = ({ children }) => (
 
 const router = createBrowserRouter([
   {
-    path: '/',
-    element: <Layout><Home /></Layout>,
+    path: "/",
+    element: (
+      <Layout>
+        <Home />
+      </Layout>
+    ),
   },
   {
-    path: '/about',
-    element: <Layout><About /></Layout>,
+    path: "/about",
+    element: (
+      <Layout>
+        <About />
+      </Layout>
+    ),
   },
   {
-    path: '/contact',
-    element: <Layout><Contact /></Layout>,
+    path: "/contact",
+    element: (
+      <Layout>
+        <Contact />
+      </Layout>
+    ),
   },
   {
-    path: '/product/:id',
-    element: <Layout><ProductDetails /></Layout>,
+    path: "/elvis",
+    element: (
+      <Layout>
+        <Elvis />
+      </Layout>
+    ),
   },
   {
-    path: '/blog',
-    element: <Layout><Blog /></Layout>,
+    path: "/product/:id",
+    element: (
+      <Layout>
+        <ProductDetails />
+      </Layout>
+    ),
+  },
+  {
+    path: "/blog",
+    element: (
+      <Layout>
+        <Blog />
+      </Layout>
+    ),
     children: [
       {
-        path: ':id',
+        path: ":id",
         element: <BlogPost />,
       },
     ],
   },
   {
-    path: '*',
-    element: <Layout><NotFound /></Layout>,
+    path: "*",
+    element: (
+      <Layout>
+        <NotFound />
+      </Layout>
+    ),
   },
-])
+]);
 
 const App = () => {
   return <RouterProvider router={router} />

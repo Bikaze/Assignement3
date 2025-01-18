@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 
 const MultiCheckboxForm = () => {
-  const options = ['Option A', 'Option B', 'Option C']
+  const options = ['liverpool ', 'arsenal', 'APR ','lakers','Man City','FC Barcelona']
   const [selected, setSelected] = useState([])
 
   const toggleOption = (option) => {
